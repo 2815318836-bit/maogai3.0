@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#195568">
+    <title>毛概刷题</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">M</div>
+          <div>
+            <h1>毛概刷题</h1>
+            <p id="paperMeta">50 题 · 50 分</p>
+          </div>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div class="toolbar">
+          <div class="metric">
+            <span>已答</span>
+            <strong id="answeredCount">0/50</strong>
+          </div>
+          <div class="metric">
+            <span>分数</span>
+            <strong id="scoreText">--</strong>
+          </div>
+          <button id="newPaperBtn" class="ghost-btn" type="button">换一套</button>
+          <button id="submitBtn" class="primary-btn" type="button">交卷</button>
+        </div>
+      </header>
+
+      <main>
+        <section id="resultPanel" class="result-panel" hidden>
+          <div>
+            <span id="resultBadge" class="result-badge">已交卷</span>
+            <h2 id="resultTitle">0 / 50</h2>
+          </div>
+          <div id="resultSummary" class="result-summary"></div>
+        </section>
+
+        <div id="paper" class="paper"></div>
+      </main>
+    </div>
+
+    <script src="./question-bank.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
